@@ -39,7 +39,7 @@ class Cache:
 
         data = self._redis.get(key)
         if fn:
-            fn(data)
+            data = fn(data)
         return data
 
     def get_str(self, key: str) -> str:
