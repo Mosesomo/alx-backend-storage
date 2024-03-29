@@ -2,11 +2,11 @@
 '''Writing strings to Redis'''
 import redis
 import uuid
-from typing import Union, Optional
+from typing import Union, Optional, Callable
 from functools import wraps
 
 
-def count_calls(method: callable) -> callable:
+def count_calls(method: Callable) -> Callable:
     '''decorator that takes a single method Callable
         argument and returns a Callable.
     '''
