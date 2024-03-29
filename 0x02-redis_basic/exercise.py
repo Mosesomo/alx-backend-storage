@@ -10,7 +10,7 @@ class Cache:
         writing data to a Redis server.
     '''
 
-    def __init__(self) -> None:
+    def __init__(self):
         '''Instance of redis client'''
 
         self.__redis = redis.Redis(host='localhost', port=6379, db=0)
