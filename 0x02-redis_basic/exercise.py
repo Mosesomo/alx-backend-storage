@@ -15,7 +15,7 @@ class Cache:
 
         self.__redis = redis.Redis()
         self.__redis.flushdb()
-        
+
     def store(self, data: Union[str, bytes, int, float]) -> str:
         '''
             store method that takes a data argument and returns
@@ -26,5 +26,5 @@ class Cache:
 
         key = str(uuid.uuid4())
         self.__redis.set(key, data)
-        
+
         return key
